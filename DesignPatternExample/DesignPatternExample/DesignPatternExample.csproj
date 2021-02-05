@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{932E259E-58AE-45E6-802C-FE4E1EEDCCC9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPatternExample</RootNamespace>
+    <AssemblyName>DesignPatternExample</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ardalis.SmartEnum, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ardalis.SmartEnum.2.0.0\lib\net452\Ardalis.SmartEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.5.11.6\lib\net47\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.10.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.11.10\lib\net47\Unity.Container.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AbstractClass\PrintBase.cs" />
+    <Compile Include="Entities\AbstractClass\CanonPrinter.cs" />
+    <Compile Include="Entities\AbstractClass\CoffeeBase.cs" />
+    <Compile Include="Entities\AbstractClass\Expresso.cs" />
+    <Compile Include="Entities\AbstractClass\FrothyCreamingCoffee.cs" />
+    <Compile Include="Entities\AbstractClass\HPPrinter.cs" />
+    <Compile Include="Entities\AbstractClass\IceCoffee.cs" />
+    <Compile Include="Entities\ActionFuncDelegates\CustomerFacade.cs" />
+    <Compile Include="Entities\ActionFuncDelegates\CustomerPresentation.cs" />
+    <Compile Include="Entities\Airflow\AirflowDemo.cs" />
+    <Compile Include="Entities\AnonymouseLambdaMethod\AnonymouseMethodDemo.cs" />
+    <Compile Include="Entities\AnonymouseLambdaMethod\LambdaCollectionEx.cs" />
+    <Compile Include="Entities\Delegates\DelegateDemo.cs" />
+    <Compile Include="Entities\Enums\AbstractCustomerType.cs" />
+    <Compile Include="Entities\Enums\CustomerType.cs" />
+    <Compile Include="Entities\DockerDemo\DockerExample.cs" />
+    <Compile Include="Entities\Enums\CustomerEnumDemo.cs" />
+    <Compile Include="Entities\Interface\AppunityContainer.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\CreditCardPaymentLC.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\DebitCardPaymentLC.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\GooglePayLC.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\IPaymentMode.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\PaymentManagerLC.cs" />
+    <Compile Include="Entities\Interface\LooselyCoupled\PaymentModeFactory.cs" />
+    <Compile Include="Entities\Interface\TightlyCoupled\CreditCardPayment.cs" />
+    <Compile Include="Entities\Interface\TightlyCoupled\DebitCardPayment.cs" />
+    <Compile Include="Entities\Interface\TightlyCoupled\GooglePay.cs" />
+    <Compile Include="Entities\Interface\TightlyCoupled\PaymentManager.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\AuthenticationService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\BalanceCheckerService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\DataAccessService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\IAuthenticationService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\IBalanceCheckService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\IDataAccessService.cs" />
+    <Compile Include="Entities\Interface\UnitTesting\WithdrawalService.cs" />
+    <Compile Include="Entities\Kafka\KafkaDemo.cs" />
+    <Compile Include="Entities\MongoDB\MongoDBDemo.cs" />
+    <Compile Include="Entities\PolymorphismInheritance\Airplane.cs" />
+    <Compile Include="Entities\PolymorphismInheritance\BusinessFacade.cs" />
+    <Compile Include="Entities\PolymorphismInheritance\Car.cs" />
+    <Compile Include="Entities\PolymorphismInheritance\Ship.cs" />
+    <Compile Include="Entities\PolymorphismInheritance\Machine.cs" />
+    <Compile Include="Entities\PolymorphismInterface\CommunicationFacade.cs" />
+    <Compile Include="Entities\PolymorphismInterface\CommunicationFactory.cs" />
+    <Compile Include="Entities\PolymorphismInterface\EmailMode.cs" />
+    <Compile Include="Entities\PolymorphismInterface\ICommunication.cs" />
+    <Compile Include="Entities\PolymorphismInterface\TextMode.cs" />
+    <Compile Include="Entities\PolymorphismInterface\VoiceMode.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\EventsAndDelegates\EmployeeSeparator.cs" />
+    <Compile Include="Entities\EventsAndDelegates\Finance.cs" />
+    <Compile Include="Entities\EventsAndDelegates\IT.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
